@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.Navbar{
+  background-color: #db1919;
+  display: flex;
+  height: auto;
+  margin-left: 0;
+  min-height: 30px;
+
+}
+
+.Navbar li{
+  list-style: none;
+  padding: 26px 30px;
+  text-decoration: none;
+  color: white;
+}
