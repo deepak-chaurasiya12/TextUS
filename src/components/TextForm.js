@@ -62,13 +62,7 @@ export default function TextForm(props) {
     const [text, setText]= useState("");
     // setText("new text");
 
-    const countWords = (text) => {
-        let arr = text.split(" ");
-        let newArr = arr.filter((word) => {
-            return word!== String("");
-        });
-        return newArr.length;
-    }
+    
   return (
     <>
     <div className='container' style={{color: props.mode==="light"?"#063166":"white"}}>
@@ -85,7 +79,7 @@ export default function TextForm(props) {
     </div>
     <div className="container my-3" style={{color: props.mode==="light"?"#063166":"white"}}>
         <h2>Your Text Summary</h2>
-        <p> {countWords} words and {text.length}characters</p>
+        <p> {text.split(' ').filter(function(n) { return n !== '' }).length} words and {text.length}characters</p>
         <p>{0.008 * text.split(" ").length} Minutes taken to read</p>
         <p>{text.split(".").length} Sentences</p>
         <h2>Preview</h2>
